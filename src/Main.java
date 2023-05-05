@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         User user = new User(0, "Dibya");
         User user2 = new User(0, "Jyoti");
@@ -20,25 +20,25 @@ public class Main {
         Movie movie = new Movie(1, "MyMovie",
                 new ArrayList<>(List.of(slot1, slot2, slot3))
                 );
-//       // System.out.println(movie);
-//        System.out.println();
-//        System.out.println();
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        SlotBooker slotBooker = new SlotBooker();
-//        slotBooker.bookSlot(slot1,11, user);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        slotBooker.bookSlot(slot1,11, user2);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        slotBooker.unBookSlot(slot1,11, user);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        slotBooker.bookSlot(slot1,11, user2);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        slotBooker.unBookSlot(slot1,11, user);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        slotBooker.unBookSlot(slot1,11, user2);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
-//        slotBooker.unBookSlot(slot1,11, user);
-//        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        System.out.println(movie);
+        System.out.println();
+        System.out.println();
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        SlotBooker slotBooker = new SlotBooker();
+        slotBooker.bookSlot(slot1,11, user);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        slotBooker.bookSlot(slot1,11, user2);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        slotBooker.unBookSlot(slot1,11, user);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        slotBooker.bookSlot(slot1,11, user2);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        slotBooker.unBookSlot(slot1,11, user);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        slotBooker.unBookSlot(slot1,11, user2);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
+        slotBooker.unBookSlot(slot1,11, user);
+        System.out.println(movie.getSlots().get(0).getSeats().get(11));
         SlotBookerThread1 slotBookerThread1 = new SlotBookerThread1(new SlotBooker(), slot1, user2);
         SlotBookerThread1 slotBookerThread2 = new SlotBookerThread1(new SlotBooker(), slot1, user);
         Thread t1 = new Thread(slotBookerThread1);
